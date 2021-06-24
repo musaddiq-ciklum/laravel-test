@@ -10,4 +10,20 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    function abc12_RE(){
+        if(1)
+        {
+            echo 'test for linting ';
+        }
+        else
+
+            {
+                echo 'else in linting';
+            }
+
+        {
+            echo 'Test here ...';
+        }
+    }
 }
