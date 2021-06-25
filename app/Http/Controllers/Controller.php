@@ -25,5 +25,7 @@ class Controller extends BaseController
         {
             echo 'Test here ...';
         }
+                         $vaf_34 = 'Hello';
+                   echo $vaf_34;
     }
 }
