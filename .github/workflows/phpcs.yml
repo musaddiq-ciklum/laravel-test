@@ -1,18 +1,17 @@
-name: PHP Composer
-
+name: PHPCS
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
-
+    branches: [ master ]
 jobs:
-  runPHPCSInspection:
-    name: Run PHPCS inspection
+  build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{ github.event.pull_request.head.sha }}
-    - name: Run PHPCS inspection
-      uses: rtCamp/action-phpcs-code-review@v2
+      - uses: actions/checkout@v2
+
+      - name: PHP Code Style (phpcs)
+        uses: chindit/actions-phpcs@master
+        with:
+          # Folder to check code style
+          dir: app/
